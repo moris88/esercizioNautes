@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: url("assets/images/bg.png");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 80px;
+}

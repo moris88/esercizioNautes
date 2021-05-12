@@ -1,0 +1,40 @@
+<table class="w-100" [@toggleBoxMove]="stateName">
+    <thead>
+        <tr>
+            <th scope="col"><!--Id--></th>
+            <th class="fw-normal" scope="col" colspan="2">Descrizione Prodotto</th>
+            <th class="fw-normal" scope="col"><!--Descrizione Prodotto--></th>
+            <th class="fw-normal" scope="col">Qta</th>
+            <th class="fw-normal" scope="col">Prezzo</th>
+            <th class="text-center fw-normal" scope="col">Stato</th>
+            <th class="text-center fw-normal" scope="col">Azioni</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let prodotto of prodotti">
+            <td scope="row">
+                <img class="fruit" src="{{ prodotto.image }}" alt="{{ prodotto.description }}">
+            </td>
+            <td colspan="2">{{ prodotto.description }}</td>
+            <td><!--{{ prodotto.description }}--></td>
+            <td>{{ prodotto.quantity | number}} pz</td>
+            <td>{{ prodotto.price | number : '1.2'}} €</td>
+            <td>
+                <div *ngIf="prodotto.state === true">
+                    <a class="bottone green-grad">Disponibile</a>
+                </div>
+                <div *ngIf="prodotto.state === false">
+                    <a class="bottone red-grad">Esaurito</a>
+                </div>
+            </td>
+            <td>
+                <a (click)="delete(prodotto)">
+                    <img class="delete" src="assets/images/icons/delete.png" alt="delete">
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+

@@ -1,0 +1,18 @@
+<div id="spaziatura" class="container">
+    <div class="row justify-content-between mb-3">
+        <div class="col-md-5">
+            <h3 id="titolo">My Fruit Shop</h3>
+        </div>      
+        <div *ngIf="getShow() === true" class="col-md-2">
+            <a class="bottone rounded-yellow-grad" (click)="setShow(false)">Chiudi <span><img src="assets/images/icons/close.png" alt="close"></span></a>
+        </div>
+        <div *ngIf="getShow() === false" class="col-md-2">
+            <a class="bottone yellow-grad" (click)="setShow(true)">Aggiungi <span><img src="assets/images/icons/plus.png" alt="close"></span></a>
+        </div>
+    </div>
+    <div [@toggleBox]="stateName">
+        <app-fruit-add (addProdotto)="addProdotto($event)"></app-fruit-add>
+        <div id="barra"></div>
+    </div>
+    <app-fruits [_show]="_show"></app-fruits>
+</div>

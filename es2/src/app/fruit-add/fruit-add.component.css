@@ -1,0 +1,123 @@
+#description, #quantity, #price{
+    font-size: small;
+    font-weight: bold;
+    opacity: 0.5;
+    color: #8A9DA6;
+    background-color: #CED9DE;
+    border-radius: 25px;
+    border: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 5px;
+}
+
+#description{
+    width: 400px;
+}
+
+#quantity, #price{
+    width: 120px;
+}
+
+.col{
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+#banner{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 10px 10px 35px RGBA(137, 156, 136, 0.5);
+}
+
+img{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.bottone {
+    border: none;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    color: white;            
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.green-grad {
+    background-image: linear-gradient(to right,#7AF7A8, #36D46F);
+}
+
+.bottone:hover{
+    box-shadow: 10px 10px 35px RGBA(137, 156, 136, 0.5);
+    animation-name: myMoveIn;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.bottone:not(:hover){
+    /* box-shadow: 10px 10px 35px RGBA(137, 156, 136, 0.5); */
+    animation-name: myMoveOut;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/*Animation*/
+@keyframes myMoveIn {
+    0% {
+        transform: scaleX(1);
+    }
+    100% {
+        transform: scaleX(2);
+    }
+}
+
+@keyframes myMoveOut {
+    0% {
+        transform: scaleX(2);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+/*Responsive*/
+@media screen and (max-width: 990px){
+    
+    .bottone {
+        margin-top: 5px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;         
+    }
+
+    #description, #quantity, #price{
+        width: 100%;
+    }
+
+    img{
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media screen and (max-width: 720px){
+
+    img{
+        height: 30px;
+        width: 30px;
+    }
+}

@@ -1,0 +1,23 @@
+<form class="row align-items-center" method="POST" action="">
+    <div class="col-lg-10">
+        <div class="row align-items-center">
+            <div class="col-lg-auto ms-5 me-5 ps-0 pe-0">
+                <img src="assets/images/icons/fruit-placeholder.png" alt="placeholder">
+            </div>
+            <div class="col-lg-auto">
+                <input type="text" id="description" [(ngModel)]="prodotto.description" name="description" placeholder="Descrizione Prodotto" required>
+            </div>
+            <div class="col-lg-auto">
+                <input type="number" id="quantity" [(ngModel)]="prodotto.quantity" name="quantity" placeholder="Qta">
+            </div>
+            <div class="col-lg-auto">
+                <input type="number" id="price" [(ngModel)]="prodotto.price" name="price" placeholder="Prezzo" step="0.01">
+            </div>
+            <div class="col-lg-auto"></div>
+        </div>
+    </div>
+    <div class="col-lg-2">
+        <button type="submit" class="bottone green-grad" (click)="addFruit()">Conferma</button>
+    </div>
+</form>
+

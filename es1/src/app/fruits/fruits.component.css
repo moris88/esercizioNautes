@@ -1,0 +1,163 @@
+table{
+    border-collapse: separate;
+    border-spacing: 0 18px;
+    table-layout: fixed;
+}
+
+thead{
+    color: #8A9DA6;
+    background-color: #CED9DE;
+}
+
+tbody > tr{
+    position: relative;
+    cursor: pointer;
+}
+
+tbody > tr:hover{
+    box-shadow: 10px 10px 35px RGBA(0, 0, 0, 0.1);
+    animation-name: myMoveIn;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+tbody > tr:not(:hover){
+    animation-name: myMoveOut;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+th:first-child {
+    border-start-start-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+th:last-child {
+    border-start-end-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+th{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: start;
+}
+
+.text-center{
+    text-align: center;
+}
+
+td{
+    color: #6A8592;
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: start;
+}
+
+td:first-child {
+    border-start-start-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+td:last-child {
+    border-start-end-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.fruit{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    max-height: 55px;
+    min-height: 55px;
+}
+
+.delete{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.bottone {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    color: white;            
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.red-grad{
+    background-image: linear-gradient(to right,#F77A7A, #D43636);
+}
+
+.green-grad {
+    background-image: linear-gradient(to right,#7AF7A8, #36D46F);
+}
+
+/*Animation*/
+@keyframes myMoveIn {
+    0% {
+        transform: scaleX(1);
+    }
+    100% {
+        transform: scaleX(1.02);
+    }
+}
+
+@keyframes myMoveOut {
+    0% {
+        transform: scaleX(1.02);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+/*Responsive*/
+@media screen and (max-width: 990px){
+
+    .bottone {
+        padding-top: 6px;
+        padding-bottom: 6px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%; 
+        font-size: x-small;         
+    }
+
+    img{
+        max-height: 30px;
+        max-width: 30px;
+    }
+}
+
+@media screen and (max-width: 720px){
+
+    .bottone {
+        padding-top: 6px;
+        padding-bottom: 6px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 85%; 
+        font-size: xx-small;         
+    }
+
+    img{
+        max-height: 20px;
+        max-width: 20px;
+    }
+
+    th, td{
+        font-size: xx-small;
+    }
+}
+
